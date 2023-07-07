@@ -41,9 +41,11 @@
             btn_div = new Button();
             btn_mult = new Button();
             btn_menos = new Button();
-            label1 = new Label();
             btn_igual = new Button();
             btn_sete = new Button();
+            display = new TextBox();
+            btn_limpa = new Button();
+            btn_ac = new Button();
             SuspendLayout();
             // 
             // btn_nove
@@ -74,6 +76,7 @@
             btn_quatro.TabIndex = 3;
             btn_quatro.Text = "4";
             btn_quatro.UseVisualStyleBackColor = true;
+            btn_quatro.Click += btn_quatro_Click_1;
             // 
             // btn_cinco
             // 
@@ -83,6 +86,7 @@
             btn_cinco.TabIndex = 4;
             btn_cinco.Text = "5";
             btn_cinco.UseVisualStyleBackColor = true;
+            btn_cinco.Click += btn_cinco_Click_1;
             // 
             // btn_seis
             // 
@@ -92,6 +96,7 @@
             btn_seis.TabIndex = 5;
             btn_seis.Text = "6";
             btn_seis.UseVisualStyleBackColor = true;
+            btn_seis.Click += btn_seis_Click_1;
             // 
             // btn_um
             // 
@@ -101,6 +106,7 @@
             btn_um.TabIndex = 6;
             btn_um.Text = "1";
             btn_um.UseVisualStyleBackColor = true;
+            btn_um.Click += btn_um_Click_1;
             // 
             // btn_dois
             // 
@@ -110,6 +116,7 @@
             btn_dois.TabIndex = 7;
             btn_dois.Text = "2";
             btn_dois.UseVisualStyleBackColor = true;
+            btn_dois.Click += btn_dois_Click_1;
             // 
             // btn_tres
             // 
@@ -119,6 +126,7 @@
             btn_tres.TabIndex = 8;
             btn_tres.Text = "3";
             btn_tres.UseVisualStyleBackColor = true;
+            btn_tres.Click += btn_tres_Click_1;
             // 
             // btn_zero
             // 
@@ -128,6 +136,7 @@
             btn_zero.TabIndex = 9;
             btn_zero.Text = "0";
             btn_zero.UseVisualStyleBackColor = true;
+            btn_zero.Click += btn_zero_Click_1;
             // 
             // btn_soma
             // 
@@ -169,15 +178,6 @@
             btn_menos.UseVisualStyleBackColor = true;
             btn_menos.Click += btn_menos_Click;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(275, 106);
-            label1.Name = "label1";
-            label1.Size = new Size(59, 25);
-            label1.TabIndex = 14;
-            label1.Text = "label1";
-            // 
             // btn_igual
             // 
             btn_igual.Location = new Point(207, 345);
@@ -186,6 +186,7 @@
             btn_igual.TabIndex = 15;
             btn_igual.Text = "=";
             btn_igual.UseVisualStyleBackColor = true;
+            btn_igual.Click += btn_igual_Click;
             // 
             // btn_sete
             // 
@@ -195,15 +196,46 @@
             btn_sete.TabIndex = 17;
             btn_sete.Text = "7";
             btn_sete.UseVisualStyleBackColor = true;
+            btn_sete.Click += btn_sete_Click_1;
+            // 
+            // display
+            // 
+            display.Enabled = false;
+            display.Location = new Point(207, 102);
+            display.Name = "display";
+            display.Size = new Size(239, 31);
+            display.TabIndex = 18;
+            // 
+            // btn_limpa
+            // 
+            btn_limpa.Location = new Point(320, 296);
+            btn_limpa.Name = "btn_limpa";
+            btn_limpa.Size = new Size(49, 43);
+            btn_limpa.TabIndex = 19;
+            btn_limpa.Text = "C";
+            btn_limpa.UseVisualStyleBackColor = true;
+            btn_limpa.Click += btn_limpa_Click;
+            // 
+            // btn_ac
+            // 
+            btn_ac.Location = new Point(207, 296);
+            btn_ac.Name = "btn_ac";
+            btn_ac.Size = new Size(49, 43);
+            btn_ac.TabIndex = 20;
+            btn_ac.Text = "AC";
+            btn_ac.UseVisualStyleBackColor = true;
+            btn_ac.Click += btn_ac_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1257, 572);
+            Controls.Add(btn_ac);
+            Controls.Add(btn_limpa);
+            Controls.Add(display);
             Controls.Add(btn_sete);
             Controls.Add(btn_igual);
-            Controls.Add(label1);
             Controls.Add(btn_menos);
             Controls.Add(btn_mult);
             Controls.Add(btn_div);
@@ -238,8 +270,10 @@
         private Button btn_div;
         private Button btn_mult;
         private Button btn_menos;
-        private Label label1;
         private Button btn_igual;
         private Button btn_sete;
+        private TextBox display;
+        private Button btn_limpa;
+        private Button btn_ac;
     }
 }
